@@ -7,20 +7,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestBase {
 
-        WebDriver webDriver;
+        public WebDriver webDriver;
 
         @Before
         public void init() {
             webDriver = new ChromeDriver();
             webDriver.get("http://bhdtest.endava.com/petclinic/");
             webDriver.manage().window().maximize();
-
         }
+
         @After
         public void tearDown() {
             webDriver.quit();
         }
-
     }
 
 
